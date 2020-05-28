@@ -205,7 +205,7 @@ int parse_flags(char **flags, int flagc) {
   char *str_build;
   
   for (count = 1; count < flagc; count++) {
-    if (!strcmp(flags[count], "-c")) {
+    if (!strcmp(flags[count], "-c") || !strcmp(flags[count], "-g")) {
       /* ignored for CMake compatibility */
     }
     else if (!strcmp(flags[count], "-o")) {
