@@ -205,7 +205,10 @@ int parse_flags(char **flags, int flagc) {
   char *str_build;
   
   for (count = 1; count < flagc; count++) {
-    if (!strcmp(flags[count], "-o")) {
+    if (!strcmp(flags[count], "-c")) {
+      /* ignored for CMake compatibility */
+    }
+    else if (!strcmp(flags[count], "-o")) {
       if (output_format != OUTPUT_NONE)
 	return FAILED;
       output_format = OUTPUT_OBJECT;
