@@ -144,7 +144,7 @@ foreach(ARCH IN LISTS ARCHS)
     endif()
     file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/op_tbl_gen/")
     set(TABLE_GEN_OUTPUT
-        "${CMAKE_BINARY_DIR}/op_tbl_gen/opcodes_${WLA_NAME}_tables.c")
+        "${CMAKE_CURRENT_BINARY_DIR}/op_tbl_gen/opcodes_${WLA_NAME}_tables.c")
     add_custom_command(
         OUTPUT "${TABLE_GEN_OUTPUT}"
         COMMAND ${GEN_PREFIX}gen-${WLA_NAME}
